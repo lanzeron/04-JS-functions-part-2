@@ -1,10 +1,10 @@
  "use strict";
  (function() {
-     function interval(a, b) {
+     function interval(fun, delay) {
          setTimeout(function() {
-             a();
-             interval(a, b);
-         }, b);
+             fun ();
+             interval(fun, delay);
+         }, delay);
      }
      interval(function() {
          alert("ha-fa");
